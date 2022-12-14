@@ -1,0 +1,114 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "sqlServerName": {
+        "type": "string",
+        "defaultValue": "dp300-lab"
+      },
+      "sqlAdministratorLogin": {
+        "type": "string",
+        "defaultValue": "sqladmin"
+      },
+      "sqlAdministratorLoginPassword": {
+        "type": "securestring",
+        "defaultValue": "P@ssw0rd01"
+      },
+      "transparentDataEncryption": {
+        "type": "string",
+        "defaultValue": "Enabled"
+      },
+      "location": {
+        "type": "string",
+        "defaultValue": "[resourceGroup().location]"
+      }
+    },
+    "variables": {
+      "subscriptionId": "[subscription().subscriptionId]",
+      "resourceGroupName": "[resourceGroup().name]",
+      "databaseName": "AdventureWorksLT",
+        "sampleName": "AdventureWorksLT",
+      "databaseEdition": "Basic",
+      "databaseCollation": "SQL_Latin1_General_CP1_CI_AS",
+      "databaseServiceObjectiveName": "Basic",
+      "skuName": "GP_Gen5_2",
+      "tier": "GeneralPurpose"
+    },
+    "resources": [
+      {
+        "name": "[parameters('sqlServerName')]",
+        "type": "Microsoft.Sql/servers",
+        "apiVersion": "2020-02-02-preview",
+        "location": "[parameters('location')]",
+        "tags": {
+          "displayName": "SqlServer"
+        },
+        "properties": {
+          "administratorLogin": "[parameters('sqlAdministratorLogin')]",
+          "administratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]",
+          "version": "12.0"
+        },
+        "resources": [
+          {
+            "name": "[variables('databaseName')]",
+            "type": "databases",
+            "apiVersion": "2020-02-02-preview",
+            "location": "[resourceGroup().location]",
+            "tags": {
+              "displayName": "Database"
+            },
+            "properties": {
+              "edition": "[variables('databaseEdition')]",
+              "collation": "[variables('databaseCollation')]",
+              "requestedServiceObjectiveName": "[variables('databaseServiceObjectiveName')]",
+              "sampleName": "[variables('sampleName')]"
+            },
+            "sku": {
+                          "name": "[variables('skuName')]",
+                          "tier": "[variables('tier')]"
+            },
+            "dependsOn": [
+              "[parameters('sqlServerName')]"
+            ],
+            "resources": [
+              {
+                "comments": "Transparent Data Encryption",
+                "name": "current",
+                "type": "transparentDataEncryption",
+                "apiVersion": "2017-03-01-preview",
+                "properties": {
+                  "status": "[parameters('transparentDataEncryption')]"
+                },
+                "dependsOn": [
+                  "[variables('databaseName')]"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "AllowAllMicrosoftAzureIps",
+            "type": "firewallrules",
+            "apiVersion": "2020-02-02-preview",
+            "location": "[parameters('location')]",
+            "properties": {
+              "endIpAddress": "0.0.0.0",
+              "startIpAddress": "0.0.0.0"
+            },
+            "dependsOn": [
+              "[parameters('sqlServerName')]"
+            ]
+          }
+        ]
+      }
+    ],
+    "outputs": {
+      "sqlServerFqdn": {
+        "type": "string",
+        "value": "[reference(resourceId('Microsoft.Sql/servers/', parameters('sqlServerName'))).fullyQualifiedDomainName]"
+      },
+      "databaseName": {
+        "type": "string",
+        "value": "[variables('databaseName')]"
+      }
+    }
+  }  
