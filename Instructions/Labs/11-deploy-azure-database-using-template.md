@@ -92,7 +92,7 @@ lab:
 
 1. 查看并观察 JSON 属性。
 
-1. 关闭“azuredeploy.js”选项卡，并返回到包含“sql-database”GitHub 文件夹的选项卡。 向下滚动并选择“部署到 Azure”。
+1. 关闭“azuredeploy.json”选项卡，并返回到包含“sql-database”GitHub 文件夹的选项卡。 向下滚动并选择“部署到 Azure”。
 
     ![“部署到 Azure”按钮](../images/dp-300-module-11-lab-01.png)
 
