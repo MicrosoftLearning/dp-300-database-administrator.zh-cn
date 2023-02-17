@@ -30,7 +30,7 @@ lab:
 
     ![选择 Microsoft Defender for Cloud 选项的屏幕截图](../images/dp-300-module-05-lab-01.png)
 
-    在“Microsoft Defender for Cloud”页面上，选择“启用 Microsoft Defender for SQL”。
+    在“Microsoft Defender for Cloud”页面上，选择“Enable Microsoft Defender for SQL”。
 
 1. 成功启用 Azure Defender for SQL 后，将显示以下通知消息。
 
