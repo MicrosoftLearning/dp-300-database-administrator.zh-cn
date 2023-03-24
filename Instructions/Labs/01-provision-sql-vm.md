@@ -26,7 +26,7 @@ lab:
 
     ![图片 10](../images/dp-300-module-01-lab-10.png)
 
-1. 在“选择 SQL 部署选项”边栏选项卡上，单击“SQL 虚拟机”下的下拉框 。 选择标记为“免费 SQL Server 许可证: Windows Server 2022 上的 SQL 2019 Developer”的选项。 然后选择“创建”。
+1. 在“选择 SQL 部署选项”边栏选项卡上，单击“SQL 虚拟机”下的下拉框 。 选择标记为“Free SQL Server License: SQL 2019 Developer on Windows Server 2022”的选项。 然后选择“创建”。
 
     ![图片 11](../images/dp-300-module-01-lab-11.png)
 
@@ -37,7 +37,7 @@ lab:
     - 虚拟机名称：azureSQLServerVM
     - 区域：&lt;你的本地区域，与你的资源组的选定区域相同&gt;
     - 可用性选项：无需基础结构冗余
-    - 映像：免费 SQL Server 许可证：Windows Server 2022 上的 SQL 2019 Developer - Gen1
+    - 映像：Free SQL Server License: SQL 2019 Developer on Windows Server 2022 - Gen1 
     - Azure 现成实例：无（未选中）
     - 大小：标准 D2s_v3（2 个 vCPU，8 GiB 内存）。 可能需要选择“查看所有大小”链接来查看选项
     - 管理员帐户用户名：sqladmin
@@ -61,7 +61,7 @@ lab:
 
     ![图片 15](../images/dp-300-module-01-lab-15.png)
 
-    验证“启用 auto_shutdown”是否未选中。
+    验证“启用自动关闭”是否未选中。
 
 1. 导航到“高级”选项卡，然后查看配置。
 
@@ -117,7 +117,7 @@ lab:
 
     ![图片 34](../images/dp-300-module-01-lab-34.png)
 
-1. 当 SSMS 打开时，请注意，“连接到服务器”对话框将使用默认实例名称预填充。 选择“连接”  。
+1. 当 SSMS 打开时，请注意，“连接”对话框将使用默认实例名称预填充。 选择“连接”  。
 
     ![图片 35](../images/dp-300-module-01-lab-35.png)
 
