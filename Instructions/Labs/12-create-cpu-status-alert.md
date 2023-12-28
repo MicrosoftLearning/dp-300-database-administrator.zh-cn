@@ -4,13 +4,13 @@ lab:
   module: Automate database tasks for Azure SQL
 ---
 
-# <a name="create-a-cpu-status-alert-for-a-sql-server-on-azure"></a>在 Azure 上为 SQL Server 创建 CPU 状态警报
+# 在 Azure 上为 SQL Server 创建 CPU 状态警报
 
 预计时间：30 分钟
 
 你已被聘用为高级数据工程师，以帮助自动执行数据库管理的日常操作。 此自动化旨在帮助确保 AdventureWorks 数据库持续以峰值性能运行，并提供基于特定条件发出警报的方法。
 
-## <a name="create-an-alert-when-a-cpu-exceeds-an-average-of-80-percent"></a>当 CPU 超过平均值 80% 时，创建警报
+## 当 CPU 超过平均值 80% 时，创建警报
 
 1. 在 Azure 门户顶部的搜索栏中，输入 SQL，然后选择“SQL 数据库”。 选择列出的 AdventureWorksLT 数据库名称。
 
@@ -52,7 +52,7 @@ lab:
 
     ![“创建操作组”页面的屏幕截图，其中包含添加的信息](../images/dp-300-module-12-lab-09.png)
 
-1. 依次选择“查看 + 创建”、“创建”。  
+1. 依次选择“查看 + 创建”、“创建”。
 
     ![“创建警报规则”页面的屏幕截图，其中选择了“创建警报规则”](../images/dp-300-module-12-lab-10.png)
 

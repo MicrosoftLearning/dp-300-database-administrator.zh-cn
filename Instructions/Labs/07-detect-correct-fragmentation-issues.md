@@ -4,7 +4,7 @@ lab:
   module: Monitor and optimize operational resources in Azure SQL
 ---
 
-# <a name="detect-and-correct-fragmentation-issues"></a>检测并纠正碎片问题
+# 检测并纠正碎片问题
 
 预计用时：15 分钟
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="restore-a-database"></a>还原数据库
+## 还原数据库
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。
 
     ![图片 03](../images/dp-300-module-07-lab-03.png)
 
@@ -50,7 +50,7 @@ lab:
 
     ![图片 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="investigate-index-fragmentation"></a>调查索引碎片
+## 调查索引碎片
 
 1. 选择“新建查询”  。 复制下面的 T-SQL 代码并将其粘贴到“查询”窗口中。 选择“执行”以执行此查询。
 
@@ -129,7 +129,7 @@ lab:
 
     ![图片 03](../images/dp-300-module-07-lab-07.png)
 
-## <a name="rebuild-fragmented-indexes"></a>重新生成碎片索引
+## 重新生成碎片索引
 
 1. 复制下面的 T-SQL 代码并将其粘贴到“查询”窗口中。 选择“执行”以执行此查询。
 

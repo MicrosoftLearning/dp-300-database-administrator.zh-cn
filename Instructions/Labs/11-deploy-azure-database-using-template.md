@@ -4,13 +4,13 @@ lab:
   module: Automate database tasks for Azure SQL
 ---
 
-# <a name="deploy-an-azure-sql-database-from-a-template"></a>通过模板部署 Azure SQL 数据库
+# 通过模板部署 Azure SQL 数据库
 
 预计用时：15 分钟
 
 你已被聘用为高级数据工程师，帮助自动执行数据库管理的日常操作。 此自动化旨在帮助确保 AdventureWorks 数据库持续以峰值性能运行，并提供基于特定条件发出警报的方法。 AdventureWorks 在基础结构即服务 (IaaS) 和平台即服务 (PaaS) 产品/服务中都使用 SQL Server。
 
-## <a name="explore-azure-resource-manager-template"></a>浏览 Azure 资源管理器模板
+## 浏览 Azure 资源管理器模板
 
 1. 在 Microsoft Edge 中，打开一个新选项卡并导航到 GitHub 存储库中的以下路径，其中包含用于部署 SQL 数据库资源的 ARM 模板
 
@@ -18,7 +18,7 @@ lab:
     https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.sql/sql-database
     ```
 
-1. 右键单击“azuredeploy.json”，然后选择“在新的标签页中打开链接”来查看 ARM 模板，该模板应如下所示： 
+1. 右键单击“azuredeploy.json”，然后选择“在新的标签页中打开链接”来查看 ARM 模板，该模板应如下所示：
 
     ```JSON
     {

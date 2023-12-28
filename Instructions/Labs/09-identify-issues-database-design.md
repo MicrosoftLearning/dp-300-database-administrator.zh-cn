@@ -4,7 +4,7 @@ lab:
   module: Optimize query performance in Azure SQL
 ---
 
-# <a name="identify-database-design-issues"></a>找出数据库设计问题
+# 找出数据库设计问题
 
 预计用时：15 分钟
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="restore-a-database"></a>还原数据库
+## 还原数据库
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。
 
     ![图片 03](../images/dp-300-module-07-lab-03.png)
 
@@ -50,7 +50,7 @@ lab:
 
     ![图片 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="examine-the-query-and-identify-the-problem"></a>检查查询并确定问题
+## 检查查询并确定问题
 
 1. 选择“新建查询”  。 复制下面的 T-SQL 代码并将其粘贴到“查询”窗口中。 选择“执行”以执行此查询。
 
@@ -71,7 +71,7 @@ lab:
 
     ![图片 02](../images/dp-300-module-09-lab-02.png)
 
-## <a name="identify-ways-to-fix-the-warning-message"></a>确定解决警告信息的方法
+## 确定解决警告信息的方法
 
 [HumanResources].[Employee] 表结构如以下数据定义语言 (DDL) 语句所示。 查看上一个 SQL 查询中对此 DDL 使用的字段，注意它们的类型。
 
@@ -113,11 +113,11 @@ CREATE TABLE [HumanResources].[Employee](
 
 我们可以实现两种方法来修复隐式转换警告。 我们将在接下来的步骤中逐一调查。
 
-### <a name="change-the-code"></a>更改代码
+### 更改代码
 
 1. 你将如何更改代码来解决隐式转换？ 更改代码并重新运行查询。
 
-    请记得打开“包含实际的执行计划”(Ctrl+M)（如果尚未打开）。  
+    请记得打开“包含实际的执行计划”(Ctrl+M)（如果尚未打开）。 
 
     在这种情况下，只需在值的每一侧添加一个引号即可将其从数字更改为字符格式。 使此查询的查询窗口保持打开状态。
 
@@ -133,7 +133,7 @@ CREATE TABLE [HumanResources].[Employee](
 
     注意：警告消息现已消失，并且查询计划已得到改进。 通过更改 `WHERE` 子句，使与 NationalIDNumber 列相比的值与表中的列的数据类型相匹配，优化器可以消除隐式转换。
 
-### <a name="change-the-data-type"></a>更改数据类型
+### 更改数据类型
 
 1. 还可以通过更改表结构来修复隐式转换警告。
 

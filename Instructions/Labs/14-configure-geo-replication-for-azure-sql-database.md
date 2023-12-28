@@ -4,15 +4,15 @@ lab:
   module: Plan and implement a high availability and disaster recovery solution
 ---
 
-# <a name="configure-geo-replication-for-azure-sql-database"></a>为 Azure SQL 数据库配置异地复制
+# 为 Azure SQL 数据库配置异地复制
 
 预计时间：30 分钟
 
 作为 AdventureWorks 中的数据库管理员 (DBA)，你需要为 Azure SQL 数据库启用异地复制，并确保它正常工作。 此外，你将使用门户手动地将其故障转移到另一个区域。
 
-## <a name="enable-geo-replication"></a>启用异地复制
+## 启用异地复制
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![Azure 门户登录页面的屏幕截图](../images/dp-300-module-01-lab-01.png)
 
@@ -39,11 +39,11 @@ lab:
     >[!NOTE]
     > 创建新的服务器来托管辅助数据库时，可忽略上面的错误消息。
 
-1. 在“创建 SQL 数据库服务器”页上，输入首选的唯一服务器名称、有效的服务器管理员登录名和安全密码。    选择一个位置作为目标区域，然后选择“确定”以创建服务器。 
+1. 在“创建 SQL 数据库服务器”页上，输入首选的唯一服务器名称、有效的服务器管理员登录名和安全密码。 选择一个位置作为目标区域，然后选择“确定”以创建服务器。
 
     ![显示“创建 SQL 数据库服务器”页的屏幕截图。](../images/dp-300-module-14-lab-04.png)
 
-1. 返回到“创建 SQL 数据库 - 异地副本”页，选择“查看 + 创建”。 
+1. 返回到“创建 SQL 数据库 - 异地副本”页，选择“查看 + 创建”。
 
     ![显示“创建 SQL 数据库服务器”页的屏幕截图。](../images/dp-300-module-14-lab-05.png)
 
@@ -59,7 +59,7 @@ lab:
 
     ![显示“查看 + 创建”页面的屏幕截图。](../images/dp-300-module-14-lab-08.png)
 
-## <a name="failover-sql-database-to-a-secondary-region"></a>将 SQL 数据库故障转移到次要区域
+## 将 SQL 数据库故障转移到次要区域
 
 创建 Azure SQL 数据库副本后，将执行故障转移。
 

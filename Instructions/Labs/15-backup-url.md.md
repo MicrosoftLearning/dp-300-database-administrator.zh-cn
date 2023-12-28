@@ -4,13 +4,13 @@ lab:
   module: Plan and implement a high availability and disaster recovery solution
 ---
 
-# <a name="backup-to-url"></a>备份到 URL
+# 备份到 URL
 
 预计时间：30 分钟
 
 作为 AdventureWorks 的数据库管理员 (DBA)，你需要将数据库备份到 Azure 中的 URL，并在发生人为错误后从 Azure Blob 存储还原它。
 
-## <a name="restore-a-database"></a>还原数据库
+## 还原数据库
 
 1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\HADR 路径（如果文件夹结构不存在，请进行创建） 。
 
@@ -46,9 +46,9 @@ lab:
 
     ![图片 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="configure-backup-to-url"></a>配置“备份到 URL”
+## 配置“备份到 URL”
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![Azure 门户登录页面的屏幕截图](../images/dp-300-module-01-lab-01.png)
 
@@ -101,7 +101,7 @@ lab:
     az storage container create --name "backups" --account-name "dp300backupstorage1234" --account-key "storage_key" --fail-on-exist
     ```
 
-    其中，dp300backupstorage1234 是创建存储帐户时使用的唯一存储帐户名称，storage_key 是上面生成的密钥。  输出应返回“true”。
+    其中，dp300backupstorage1234 是创建存储帐户时使用的唯一存储帐户名称，storage_key 是上面生成的密钥。 输出应返回“true”。
 
     ![用于创建容器的输出的屏幕截图。](../images/dp-300-module-15-lab-07.png)
 
@@ -111,7 +111,7 @@ lab:
     az storage container list --account-name "dp300backupstorage1234" --account-key "storage_key"
     ```
 
-    其中，dp300backupstorage1234 是创建存储帐户时使用的唯一存储帐户名称，storage_key 是生成的密钥。  应返回与下图相似的输出:
+    其中，dp300backupstorage1234 是创建存储帐户时使用的唯一存储帐户名称，storage_key 是生成的密钥。 应返回与下图相似的输出:
 
     ![容器列表的屏幕截图。](../images/dp-300-module-15-lab-08.png)
 
@@ -121,13 +121,13 @@ lab:
     az storage container generate-sas -n "backups" --account-name "dp300backupstorage1234" --account-key "storage_key" --permissions "rwdl" --expiry "date_in_the_future" -o tsv
     ```
 
-    其中，dp300backupstorage1234 是创建存储帐户时使用的唯一存储帐户名称，storage_key 是生成的密钥，date_in_the_future 是比现在晚的时间。   date_in_the_future 必须为协调世界时 (UTC)。 例如 2021-12-31T00:00Z，它表示在 2020 年 12 月 31 日午夜过期。
+    其中，dp300backupstorage1234 是创建存储帐户时使用的唯一存储帐户名称，storage_key 是生成的密钥，date_in_the_future 是比现在晚的时间。 date_in_the_future 必须为协调世界时 (UTC)。 例如 2021-12-31T00:00Z，它表示在 2020 年 12 月 31 日午夜过期。
 
     应返回与下图相似的输出。 复制整个共享访问签名，将它粘贴到记事本中，在下一个任务中会用到它。
 
     ![共享访问签名密钥的屏幕截图。](../images/dp-300-module-15-lab-09.png)
 
-## <a name="create-credential"></a>创建凭据
+## 创建凭据
 
 现在功能已配置，你可以将备份文件生成为 Azure 存储帐户中的 Blob。
 
@@ -167,7 +167,7 @@ lab:
     DROP CREDENTIAL [https://<storage_account_name>.blob.core.windows.net/backups]  
     ```
 
-## <a name="backup-to-url"></a>备份到 URL
+## 备份到 URL
 
 1. 通过以下 Transact-SQL 命令将 AdventureWorks2017 数据库备份到 Azure：
 
@@ -187,11 +187,11 @@ lab:
 
     如果发生错误，请检查在凭据创建过程中是否键入了错误的内容，以及所有内容是否已成功创建。
 
-## <a name="validate-the-backup-through-azure-cli"></a>通过 Azure CLI 验证备份
+## 通过 Azure CLI 验证备份
 
 要确保文件确实在 Azure 中，可以使用存储资源管理器（预览版）或 Azure Cloud Shell。
 
-1. 启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
 1. 使用 Azure Cloud Shell 运行此 Azure CLI 命令：
 
@@ -205,7 +205,7 @@ lab:
 
     我们可以确认已成功生成备份文件。
 
-## <a name="validate-the-backup-through-storage-explorer"></a>通过存储资源管理器验证备份
+## 通过存储资源管理器验证备份
 
 1. 若要使用存储资源管理器（预览版），请从 Azure 门户的主页选择“存储帐户”。
 
@@ -225,7 +225,7 @@ lab:
 
     ![屏幕截图显示存储浏览器上的备份文件。](../images/dp-300-module-15-lab-14.png)
 
-## <a name="restore-from-url"></a>从 URL 还原
+## 从 URL 还原
 
 此任务将演示如何从 Azure Blob 存储还原数据库。
 

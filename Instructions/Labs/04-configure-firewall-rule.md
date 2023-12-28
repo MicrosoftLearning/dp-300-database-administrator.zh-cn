@@ -4,7 +4,7 @@ lab:
   module: Implement a Secure Environment for a Database Service
 ---
 
-# <a name="implement-a-secure-environment"></a>实现安全环境
+# 实现安全环境
 
 预计时间：30 分钟
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="configure-azure-sql-database-firewall-rules"></a>配置 Azure SQL 数据库防火墙规则
+## 配置 Azure SQL 数据库防火墙规则
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![图 1](../images/dp-300-module-01-lab-01.png)
 
@@ -36,7 +36,7 @@ lab:
 
     ![图 2](../images/dp-300-module-04-lab-4.png)
 
-1. 在“网络”页上，单击“+ 添加客户端 IPv4 地址(IP 地址)”，然后单击“保存”。  
+1. 在“网络”页上，单击“+ 添加客户端 IPv4 地址(IP 地址)”，然后单击“保存”。
 
     ![图片 3](../images/dp-300-module-04-lab-5.png)
 
@@ -57,9 +57,9 @@ lab:
 
     ![自动生成的社交媒体文章说明的屏幕截图](../images/dp-300-module-04-lab-7.png)
 
-1. 在“导入数据层应用程序”对话框中，单击第一个屏幕上的“下一步”。 
+1. 在“导入数据层应用程序”对话框中，单击第一个屏幕上的“下一步”。
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorksLT.bacpac 中的 .bacpac 文件下载到实验室 VM 上的 C:\LabFiles\Secure Environment 路径（如果文件夹结构不存在，请进行创建）。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorksLT.bacpac 中的 .bacpac 文件下载到实验室 VM 上的 C:\LabFiles\Secure Environment 路径（如果文件夹结构不存在，请进行创建）。
 
 1. 在“导入设置”屏幕中，单击“浏览”并导航至 C:\LabFiles\Secure Environment 文件夹，单击 AdventureWorksLT.bacpac 文件，然后单击“打开”    。 返回到“导入数据层应用程序”屏幕，单击“下一步” 。
 
@@ -80,12 +80,12 @@ lab:
 
     ![自动生成的手机说明的屏幕截图](../images/dp-300-module-04-lab-11.png)
 
-1. 返回到 SQL Server Management Studio，在对象资源管理器中，展开“数据库”文件夹。  然后右键单击 AdventureWorksFromBacpac 数据库，再单击“新建查询”。 
+1. 返回到 SQL Server Management Studio，在对象资源管理器中，展开“数据库”文件夹。 然后右键单击 AdventureWorksFromBacpac 数据库，再单击“新建查询”。
 
     ![自动生成的手机说明的屏幕截图](../images/dp-300-module-04-lab-12.png)
 
 1. 通过将文本粘贴到查询窗口中来执行以下 T-SQL 查询。
-    1. 重要提示：请将 000.000.000.00 替换为你的客户端 IP 地址。  单击“执行”或按 F5 。
+    1. 重要提示：请将 000.000.000.00 替换为你的客户端 IP 地址。 单击“执行”或按 F5 。
 
     ```sql
     EXECUTE sp_set_database_firewall_rule 
@@ -104,9 +104,9 @@ lab:
 
     ![自动生成的手机说明的屏幕截图](../images/dp-300-module-04-lab-13.png)
 
-    注意：此命令会在 AdventureWorksFromBacpac 数据库中创建一个包含的用户。  我们将在下一步中测试此凭据。
+    注意：此命令会在 AdventureWorksFromBacpac 数据库中创建一个包含的用户。 我们将在下一步中测试此凭据。
 
-1. 导航到对象资源管理器。 依次单击“连接”和“数据库引擎”。 
+1. 导航到对象资源管理器。 依次单击“连接”和“数据库引擎”。
 
     ![图片 1960831949](../images/dp-300-module-04-lab-14.png)
 
@@ -121,7 +121,7 @@ lab:
 
     ![自动生成的手机说明的屏幕截图](../images/dp-300-module-04-lab-15.png)
 
-    注意：生成此错误是因为该连接尝试登录 master 数据库，而不是创建用户的 AdventureWorksFromBacpac。 若要更改连接上下文，请单击“确定”来退出错误消息，然后单击“连接到服务器”对话框中的“选项 >>”，如下所示。  
+    注意：生成此错误是因为该连接尝试登录 master 数据库，而不是创建用户的 AdventureWorksFromBacpac。 若要更改连接上下文，请单击“确定”来退出错误消息，然后单击“连接到服务器”对话框中的“选项 >>”，如下所示。
 
     ![图片 9](../images/dp-300-module-04-lab-16.png)
 

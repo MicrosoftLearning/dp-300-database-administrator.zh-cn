@@ -4,15 +4,15 @@ lab:
   module: Automate database tasks for Azure SQL
 ---
 
-# <a name="deploy-an-automation-runbook-to-automatically-rebuild-indexes"></a>部署自动化 Runbook 来自动重新生成索引
+# 部署自动化 Runbook 来自动重新生成索引
 
 预计时间：30 分钟
 
 你已被聘用为高级数据库管理员，帮助自动执行数据库管理的日常操作。 此自动化旨在帮助确保 AdventureWorks 数据库持续以峰值性能运行，并提供基于特定条件发出警报的方法。 AdventureWorks 在基础结构即服务 (IaaS) 和平台即服务 (PaaS) 产品/服务中都使用 SQL Server。
 
-## <a name="create-an-automation-account"></a>创建 Automation 帐户
+## 创建 Automation 帐户
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![Azure 门户登录页面的屏幕截图](../images/dp-300-module-01-lab-01.png)
 
@@ -22,7 +22,7 @@ lab:
 
 1. 在“创建自动化帐户”页上，输入以下信息，然后选择“查看 + 创建” 。
 
-    - **资源组：** 从 automateLab 开头
+    - **资源组：** &lt;你的资源组&gt;
     - **名称：** autoAccount
     - **位置：** 使用默认值。
 
@@ -35,7 +35,7 @@ lab:
     > [!NOTE]
     > 自动化帐户应在三分钟内创建完成。
 
-## <a name="connect-to-an-existing-azure-sql-database"></a>连接到现有 Azure SQL 数据库
+## 连接到现有 Azure SQL 数据库
 
 1. 在 Azure 门户中，通过搜索“sql 数据库”导航到你的数据库。
 
@@ -85,7 +85,7 @@ lab:
 
     ![新存储过程的屏幕截图。](../images/dp-300-module-13-lab-10.png)
 
-## <a name="configure-automation-account-assets"></a>配置自动化帐户资产
+## 配置自动化帐户资产
 
 后续步骤包括配置准备创建 Runbook 所需的资产。 然后选择自动化帐户。
 
@@ -97,7 +97,7 @@ lab:
 
     ![选择 autoAccount 自动化帐户的屏幕截图。](../images/dp-300-module-13-lab-12.png)
 
-1. 在“自动化”边栏选项卡的“共享资源”部分，选择“模块”。  然后选择“浏览库”。
+1. 在“自动化”边栏选项卡的“共享资源”部分，选择“模块”。 然后选择“浏览库”。
 
     ![选择“模块”菜单的屏幕截图。](../images/dp-300-module-13-lab-13.png)
 
@@ -105,7 +105,7 @@ lab:
 
     ![选择“SqlServer”模块的屏幕截图。](../images/dp-300-module-13-lab-14.png)
 
-1. 选择“SqlServer”，这将定向到下一个屏幕，然后选中“选择”。 
+1. 选择“SqlServer”，这将定向到下一个屏幕，然后选中“选择”。
 
     ![选中“选择”的屏幕截图。](../images/dp-300-module-13-lab-15.png)
 
@@ -126,7 +126,7 @@ lab:
 
     ![添加帐户凭据的屏幕截图。](../images/dp-300-module-13-lab-18.png)
 
-## <a name="create-a-powershell-runbook"></a>创建 PowerShell Runbook
+## 创建 PowerShell Runbook
 
 1. 在 Azure 门户中，通过搜索“sql 数据库”导航到你的数据库。
 
@@ -136,7 +136,7 @@ lab:
 
     ![显示选择 AdventureWorks SQL 数据库的屏幕截图。](../images/dp-300-module-13-lab-04.png)
 
-1. 在概述页面上，复制 Azure SQL 数据库的服务器名称，如下所示（服务器名称应以 dp300-lab 开头）。  将在后续步骤中粘贴此名称。
+1. 在概述页面上，复制 Azure SQL 数据库的服务器名称，如下所示（服务器名称应以 dp300-lab 开头）。 将在后续步骤中粘贴此名称。
 
     ![复制服务器名称的屏幕截图。](../images/dp-300-module-13-lab-19.png)
 
@@ -148,7 +148,7 @@ lab:
 
     ![选择 autoAccount 自动化帐户的屏幕截图。](../images/dp-300-module-13-lab-12.png)
 
-1. 滚动到自动化帐户边栏选项卡的“流程自动化”部分，选择“Runbook”，然后选择“+ 创建 Runbook”。  
+1. 滚动到自动化帐户边栏选项卡的“流程自动化”部分，选择“Runbook”，然后选择“+ 创建 Runbook”。
 
     ![在 Runbook 页上选择“创建 Runbook”的屏幕截图。](../images/dp-300-module-13-lab-20.png)
 
@@ -179,7 +179,7 @@ lab:
 
     ![显示成功创建 Runbook 的消息的屏幕截图。](../images/dp-300-module-13-lab-23.png)
 
-## <a name="create-a-schedule-for-a-runbook"></a>为 Runbook 创建计划
+## 为 Runbook 创建计划
 
 接下来将安排定期执行 Runbook。
 

@@ -4,7 +4,7 @@ lab:
   module: Implement a Secure Environment for a Database Service
 ---
 
-# <a name="configure-database-authentication-and-authorization"></a>配置数据库身份验证和授权
+# 配置数据库身份验证和授权
 
 预计时间：**20 分钟**
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="authorize-access-to-azure-sql-database-with-azure-active-directory"></a>使用 Azure Active Directory 授予对 Azure SQL 数据库的访问权限
+## 使用 Azure Active Directory 授予对 Azure SQL 数据库的访问权限
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![图 1](../images/dp-300-module-01-lab-01.png)
 
@@ -24,7 +24,7 @@ lab:
 
     ![屏幕截图显示在 Azure 门户主页上选择“所有资源”](../images/dp-300-module-03-lab-01.png)
 
-1. 选择 Azure SQL 数据库服务器 dp300-lab-xxxxxx（其中 xxxxxx 是随机字符串），然后选择“Active Directory 管理员”旁边的“未配置”。   
+1. 选择 Azure SQL 数据库服务器 dp300-lab-xxxxxx（其中 xxxxxx 是随机字符串），然后选择“Active Directory 管理员”旁边的“未配置”。
 
     ![屏幕截图显示选择“未配置”](../images/dp-300-module-03-lab-02.png)
 
@@ -54,7 +54,7 @@ lab:
 > 首次尝试登录到 Azure SQL 数据库时，需要将客户端 IP 地址添加到防火墙。 SQL Server Management Studio 可以为你执行此操作。 使用“资源”选项卡中的 Azure 门户密码，然后选择“登录”，选择 Azure 凭据，然后选择“确定”。
 > ![显示添加客户端 IP 地址的屏幕截图](../images/dp-300-module-03-lab-07.png)
 
-## <a name="manage-access-to-database-objects"></a>管理对数据库对象的访问权限
+## 管理对数据库对象的访问权限
 
 在此任务中，你将管理对数据库及其对象的访问权限。 首先，在 AdventureWorksLT 数据库中创建两个用户。
 
