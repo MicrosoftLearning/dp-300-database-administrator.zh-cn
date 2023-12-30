@@ -4,7 +4,7 @@ lab:
   module: Monitor and optimize operational resources in Azure SQL
 ---
 
-# <a name="isolate-performance-problems-through-monitoring"></a>通过监视隔离性能问题
+# 通过监视隔离性能问题
 
 预计时间：30 分钟
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="review-cpu-utilization-in-azure-portal"></a>在 Azure 门户中查看 CPU 利用率
+## 在 Azure 门户中查看 CPU 利用率
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![图 1](../images/dp-300-module-01-lab-01.png)
 
@@ -36,7 +36,7 @@ lab:
 
     ![屏幕截图显示正在选择设置服务器防火墙](../images/dp-300-module-06-lab-01.png)
 
-1. 在“网络”页上，选择“+ 添加客户端 IPv4 地址(IP 地址)”，然后选择“保存”。  
+1. 在“网络”页上，选择“+ 添加客户端 IPv4 地址(IP 地址)”，然后选择“保存”。
 
     ![屏幕截图显示正在选择添加客户端 IP](../images/dp-300-module-06-lab-02.png)
 
@@ -85,7 +85,7 @@ lab:
 
     ![屏幕截图显示正在选择“指标”图标](../images/dp-300-module-06-lab-07.png)
 
-1. 更改“指标”菜单选项以反映 CPU 百分比，然后选择“平均值聚合”。这将显示给定时间范围的平均 CPU 百分比。   
+1. 更改“指标”菜单选项以反映 CPU 百分比，然后选择“平均值聚合”。这将显示给定时间范围的平均 CPU 百分比。
 
     ![屏幕截图显示 CPU 百分比](../images/dp-300-module-06-lab-08.png)
 
@@ -93,7 +93,7 @@ lab:
 
     ![屏幕截图显示平均值聚合](../images/dp-300-module-06-lab-09.png)
 
-## <a name="identify-high-cpu-queries"></a>识别 CPU 占用率高的查询
+## 识别 CPU 占用率高的查询
 
 1. 在 AdventureWorks 数据库的边栏选项卡的“智能性能”部分，找到“Query Performance Insight”图标  。
 

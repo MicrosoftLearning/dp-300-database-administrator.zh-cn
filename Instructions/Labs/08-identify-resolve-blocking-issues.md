@@ -4,7 +4,7 @@ lab:
   module: Optimize query performance in Azure SQL
 ---
 
-# <a name="identify-and-resolve-blocking-issues"></a>识别并解决阻塞性问题
+# 识别并解决阻塞性问题
 
 预计用时：15 分钟
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="restore-a-database"></a>还原数据库
+## 还原数据库
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。
 
     ![图片 03](../images/dp-300-module-07-lab-03.png)
 
@@ -50,7 +50,7 @@ lab:
 
     ![图片 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="run-blocked-queries-report"></a>运行已阻止的查询报告
+## 运行已阻止的查询报告
 
 1. 选择“新建查询”  。 复制下面的 T-SQL 代码并将其粘贴到“查询”窗口中。 选择“执行”以执行查询。
 
@@ -124,7 +124,7 @@ lab:
 
     注意：此查询不返回任何结果，并且无限期运行。
 
-1. 在对象资源管理器中，展开“管理” -> “扩展事件” -> “会话”。   
+1. 在对象资源管理器中，展开“管理” -> “扩展事件” -> “会话”。
 
     请注意，我们刚刚创建的名为“阻止”的扩展事件位于列表中。
 
@@ -178,7 +178,7 @@ lab:
 
     ![图片 08](../images/dp-300-module-08-lab-08.png)
 
-## <a name="enable-read-commit-snapshot-isolation-level"></a>启用读取提交快照隔离级别
+## 启用读取提交快照隔离级别
 
 1. 从 SQL Server Management Studio 中选择“新建查询”。 复制下面的 T-SQL 代码并将其粘贴到查询窗口中。 选择“执行”按钮以执行查询。
 

@@ -4,7 +4,7 @@ lab:
   module: Plan and Implement Data Platform Resources
 ---
 
-# <a name="provision-an-azure-sql-database"></a>预配 Azure SQL 数据库
+# 预配 Azure SQL 数据库
 
 预计用时：40 分钟
 
@@ -12,9 +12,9 @@ lab:
 
 作为 AdventureWorks 的数据库管理员，你将建立一个新的 SQL 数据库，其中包括一个虚拟网络终结点，以增加和简化部署的安全性。 将使用 Azure Data Studio 评估 SQL Notebook 在数据查询和结果保留方面的使用。
 
-## <a name="navigate-on-azure-portal"></a>在 Azure 门户上导航
+## 在 Azure 门户上导航
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。  
+1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
 
     ![图 1](../images/dp-300-module-01-lab-01.png)
 
@@ -28,15 +28,13 @@ lab:
 
     ![图 1](../images/dp-300-module-02-lab-46.png)
 
-## <a name="create-a-virtual-network"></a>创建虚拟网络
+## 创建虚拟网络
 
 1. 在 Azure 门户主页中，选择左侧菜单。  
 
     ![图 2](../images/dp-300-module-02-lab-01_1.png)
 
 1. 在左侧导航窗格中，单击“虚拟网络”。  
-
-    ![图片 3](../images/dp-300-module-02-lab-04.png)
 
 1. 单击“+ 创建”打开“创建虚拟网络”页面 。 在“基本信息”选项卡上，完成以下信息：
 
@@ -45,23 +43,15 @@ lab:
     - 名称：lab02-vnet
     - 区域：选择你创建了资源组的同一区域
 
-    ![图 2](../images/dp-300-module-02-lab-05.png)
+1. 单击“查看 + 创建”，查看新虚拟网络的设置，然后单击“创建” 。
 
-1. 单击“下一页: IP 地址”。  
+1. 导航到创建的虚拟网络，然后在“设置”窗格中单击“子网”，为 Azure SQL 数据库终结点配置虚拟网络的 IP 范围 。
 
-    ![图片 3](../images/dp-300-module-02-lab-06.png)
+1. 单击“默认”子网链接。 请注意，你看到的子网地址范围可能不同。
 
-1. 为 Azure SQL 数据库终结点配置虚拟网络的 IP 范围，如下所示：
+1. 在右侧的“编辑子网”窗格中，展开“服务”下拉列表，然后选择“Microsoft.Sql”  。 选择“保存” 。
 
-    - 在“IP 地址”选项卡上，保留 IPv4 地址的默认值。
-    - 单击“默认”子网链接。 请注意，你看到的子网地址范围可能不同。
-
-        ![图片 4](../images/dp-300-module-02-lab-07.png)
-
-    - 在右侧的“编辑子网”窗格中，展开“服务”下拉列表，然后选择“Microsoft.Sql”  。 选择“保存” 。
-    - 单击“查看 + 创建”按钮，查看新虚拟网络的设置，然后单击“创建” 。
-
-## <a name="provision-an-azure-sql-database"></a>预配 Azure SQL 数据库
+## 预配 Azure SQL 数据库
 
 1. 在 Azure 门户顶部的搜索框中搜索“SQL 数据库”，然后从选项列表中单击“SQL 数据库”。
 
@@ -71,12 +61,12 @@ lab:
 
     ![图片 6](../images/dp-300-module-02-lab-10_1.png)
 
-1. 在“创建 SQL 数据库”页，选择“基本信息”选项卡上的以下选项，然后单击“下一步: 网络”。  
+1. 在“创建 SQL 数据库”页，选择“基本信息”选项卡上的以下选项，然后单击“下一步: 网络”。
 
     - 订阅：&lt;你的订阅&gt;
     - 资源组：以 contoso-rg 开头
     - 数据库名称：AdventureWorksLT
-    - 服务器：单击“新建”链接。  此时将打开“创建 SQL 数据库服务器”页面。 提供服务器详细信息，如下所示：
+    - 服务器：单击“新建”链接。 此时将打开“创建 SQL 数据库服务器”页面。 提供服务器详细信息，如下所示：
         - 服务器名称：dp300-lab-&lt;你的姓名首字母缩写(小写)&gt;（服务器名称必须是全局唯一的）
         - 区域：&lt;你的本地区域，与你的资源组的选定区域相同，否则可能会失败&gt;
         - 身份验证方法：使用 SQL 身份验证
@@ -88,12 +78,12 @@ lab:
 
         ![图片 7](../images/dp-300-module-02-lab-11.png)
 
-    -  返回到“创建 SQL 数据库”页，确保“想要使用弹性池?”设置为“否”。  
+    -  返回到“创建 SQL 数据库”页，确保“想要使用弹性池?”设置为“否”。
     -  在“计算 + 存储”选项上，单击“配置数据库”链接 。 在“配置”页上的“服务层”下拉列表中，选择“基本”，然后选择“应用”   。
 
     注意：记下此服务器名称和你的登录信息。 你将在后续实验室中使用此信息。
 
-1. 对于“备份存储冗余”选项，请保留默认值：“异地冗余备份存储”。 
+1. 对于“备份存储冗余”选项，请保留默认值：“异地冗余备份存储”。
 
 1. 然后，单击“下一步: 网络”。
 
@@ -124,7 +114,7 @@ lab:
 
     ![图片 11](../images/dp-300-module-02-lab-17.png)
 
-1. 依次单击“下一步: 安全性”和“下一步: 其他设置”。   
+1. 依次单击“下一步: 安全性”和“下一步: 其他设置”。  
 
 1. 在“其他设置”页上，选择“使用现有数据”选项上的“示例”  。 如果为示例数据库显示弹出消息，请选择“确定”。
 
@@ -136,7 +126,7 @@ lab:
 
 1. 部署完成后，单击“转到资源”。
 
-## <a name="enable-access-to-an-azure-sql-database"></a>启用对 Azure SQL 数据库的访问
+## 启用对 Azure SQL 数据库的访问
 
 1. 在“SQL 数据库”页中，选择“概述”部分，然后在顶部选择服务器名称的链接 ：
 
@@ -150,7 +140,7 @@ lab:
 
     ![图片 15](../images/dp-300-module-02-lab-21.png)
 
-## <a name="connect-to-an-azure-sql-database-in-azure-data-studio"></a>连接到 Azure Data Studio 中的 Azure SQL 数据库
+## 连接到 Azure Data Studio 中的 Azure SQL 数据库
 
 1. 从实验室虚拟机启动 Azure Data Studio。
 
@@ -162,7 +152,7 @@ lab:
 
     ![图片 17](../images/dp-300-module-02-lab-25.png)
 
-1. 在“连接”边栏中的“连接详细信息”部分填写连接信息，以连接到之前创建的 SQL 数据库。 
+1. 在“连接”边栏中的“连接详细信息”部分填写连接信息，以连接到之前创建的 SQL 数据库。
 
     - 连接类型：Microsoft SQL Server
     - 服务器：输入之前创建的 SQL Server 的名称。 例如：dp300-lab-xxxxxxxx.database.windows.net（其中“xxxxxxxx”是随机数字）
@@ -174,7 +164,7 @@ lab:
 
         ![图片 18](../images/dp-300-module-02-lab-26.png)
 
-        或者，可在 Azure 门户上为 SQL Server 手动创建防火墙规则，方法是导航到 SQL Server，选择“网络”，然后选择“+ 添加客户端 IPv4 地址”（IP 地址） 
+        或者，可在 Azure 门户上为 SQL Server 手动创建防火墙规则，方法是导航到 SQL Server，选择“网络”，然后选择“+ 添加客户端 IPv4 地址”（IP 地址）
 
         ![图片 18](../images/dp-300-module-02-lab-47.png)
 
@@ -190,7 +180,7 @@ lab:
 
     ![图片 20](../images/dp-300-module-02-lab-28.png)
 
-## <a name="query-an-azure-sql-database-with-a-sql-notebook"></a>使用 SQL Notebook 查询 Azure SQL 数据库
+## 使用 SQL Notebook 查询 Azure SQL 数据库
 
 1. 在连接到该实验室的 AdventureWorksLT 数据库的 Azure Data Studio 中，单击“新建笔记本”按钮。
 

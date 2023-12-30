@@ -4,7 +4,7 @@ lab:
   module: Plan and Implement Data Platform Resources
 ---
 
-# <a name="provision-a-sql-server-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上预配 SQL Server
+# 在 Azure 虚拟机上预配 SQL Server
 
 预计时间：30 分钟
 
@@ -12,7 +12,7 @@ lab:
 
 你是 AdventureWorks 的数据库管理员。 你需要创建一个测试环境用于概念证明。 概念证明将在 Azure 虚拟机上使用 SQL Server 和AdventureWorksDW 数据库的备份。 你需要设置虚拟机、还原数据库并对其进行查询以确保其可用。
 
-## <a name="deploy-a-sql-server-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上部署 SQL Server
+## 在 Azure 虚拟机上部署 SQL Server
 
 1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)，然后使用与 Azure 订阅关联的 Microsoft 帐户登录。
 
@@ -87,9 +87,9 @@ lab:
 
     ![图片 20](../images/dp-300-module-01-lab-20.png)
 
-## <a name="connect-to-sql-server-on-an-azure-virtual-machine"></a>在 Azure 虚拟机上连接到 SQL Server
+## 在 Azure 虚拟机上连接到 SQL Server
 
-1. 在虚拟机的概述页面上，选择“连接”按钮，然后选择“RDP”。 
+1. 在虚拟机的概述页面上，选择“连接”按钮，然后选择“RDP”。
 
     ![图片 21](../images/dp-300-module-01-lab-21.png)
 
@@ -97,7 +97,7 @@ lab:
 
     ![图片 22](../images/dp-300-module-01-lab-22.png)
 
-    注意：如果看到“不满足端口先决条件”错误。  请确保选择链接以添加入站网络安全组规则，并在“端口号”字段中提及目标端口。
+    注意：如果看到“不满足端口先决条件”错误。 请确保选择链接以添加入站网络安全组规则，并在“端口号”字段中提及目标端口。
 
     ![图片 22_1](../images/dp-300-module-01-lab-22_1.png)
 

@@ -4,7 +4,7 @@ lab:
   module: Optimize query performance in Azure SQL
 ---
 
-# <a name="isolate-problem-areas-in-poorly-performing-queries-in-a-sql-database"></a>在 SQL 数据库中找出性能不佳的查询中的问题区域
+# 在 SQL 数据库中找出性能不佳的查询中的问题区域
 
 预计时间：30 分钟
 
@@ -14,9 +14,9 @@ lab:
 
 注意：这些练习要求你复制并粘贴 T-SQL 代码。 在执行代码之前，请验证代码是否已正确复制。
 
-## <a name="restore-a-database"></a>还原数据库
+## 还原数据库
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/AdventureWorks2017.bak 中的数据库备份文件下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径（如果文件夹结构不存在，请进行创建）。
 
     ![图片 03](../images/dp-300-module-07-lab-03.png)
 
@@ -50,7 +50,7 @@ lab:
 
     ![图片 03](../images/dp-300-module-07-lab-05.png)
 
-## <a name="generate-actual-execution-plan"></a>生成实际执行计划
+## 生成实际执行计划
 
 可以通过若干方式在 SQL Server Management Studio 中生成执行计划。
 
@@ -88,7 +88,7 @@ lab:
 
     查询优化器能够找到适当的索引来提取所需的记录。
 
-## <a name="resolve-a-suboptimal-query-plan"></a>解决次优查询计划
+## 解决次优查询计划
 
 1. 将下面的代码复制并粘贴到新的查询窗口中。
 
@@ -135,7 +135,7 @@ lab:
 
     ![屏幕截图显示改进的执行计划](../images/dp-300-module-10-lab-05.png)
 
-## <a name="use-query-store-to-detect-and-handle-regression"></a>使用查询存储来检测和处理回归
+## 使用查询存储来检测和处理回归
 
 接下来，将运行一个工作负载，以生成查询存储的查询统计信息，检查“资源消耗量最大的几个查询”报表，以确定性能不佳问题，并了解如何强制实施更好的执行计划。
 
@@ -159,9 +159,9 @@ lab:
 
     更改兼容性级别类似于过去移动数据库。 它将 SQL Server 可以使用的功能限制为 SQL Server 2008 中提供的功能。
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/CreateRandomWorkloadGenerator.sql 中的 T-SQL 脚本下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/CreateRandomWorkloadGenerator.sql 中的 T-SQL 脚本下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径。
 
-1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/ExecuteRandomWorkload.sql 中的 T-SQL 脚本下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径。 
+1. 将 https://github.com/MicrosoftLearning/dp-300-database-administrator/blob/master/Instructions/Templates/ExecuteRandomWorkload.sql 中的 T-SQL 脚本下载到实验室虚拟机上的 C:\LabFiles\Monitor and optimize 路径。
 
 1. 在 SQL Server Management Studio 中选择“文件”****“打开”****“文件”菜单。
 
@@ -169,7 +169,7 @@ lab:
 
 1. 打开 SQL Server Management Studio 后，选择“执行”或按 <kbd>F5</kbd> 以执行查询。
 
-1. 在新的查询编辑器中，打开文件 C:\LabFiles\Monitor and optimize\ExecuteRandomWorkload.sql，然后选择“执行”或按 <kbd>F5</kbd> 来执行查询。 
+1. 在新的查询编辑器中，打开文件 C:\LabFiles\Monitor and optimize\ExecuteRandomWorkload.sql，然后选择“执行”或按 <kbd>F5</kbd> 来执行查询。
 
 1. 执行完成后，再次运行该脚本以在服务器上创建额外负载。 对于此查询，使“查询”选项卡保持打开状态。
 
@@ -187,7 +187,7 @@ lab:
 
 1. 从 ExecuteRandomWorkload.sql 文件导航回到查询选项卡，然后重新执行它。
 
-## <a name="examine-top-resource-consuming-queries-report"></a>查看“资源消耗量最大的几个查询报表”
+## 查看“资源消耗量最大的几个查询报表”
 
 1. 若要查看“查询存储”节点，需要刷新 SQL Server Management Studio 中的 AdventureWorks2017 数据库。 右键单击数据库名称，然后选择“刷新”。 然后，你将看到数据库下的“查询存储”节点。
 
@@ -211,7 +211,7 @@ lab:
 
     这将显示查询存储中最长持续时间的查询及其计划摘要。
 
-## <a name="force-a-better-execution-plan"></a>强制执行更好的执行计划
+## 强制执行更好的执行计划
 
 1. 导航到报表的“计划摘要”部分，如下所示。 你会注意到，两个执行计划的持续时间大不相同。
 
@@ -227,13 +227,13 @@ lab:
 
     有时，查询优化器可能会对要使用的执行计划做出不当选择。 如果出现这种情况，可以强制 SQL Server 使用所需的计划，使其更好地执行。
 
-## <a name="use-query-hints-to-impact-performance"></a>使用查询提示影响性能
+## 使用查询提示影响性能
 
 接下来，你将运行工作负载，将查询更改为使用参数，并将查询提示应用于查询，然后重新执行查询。
 
 在继续练习之前，通过选择“窗口”菜单关闭所有当前查询窗口，然后选择“关闭所有文档”。 在弹出窗口中，选择“否”。
 
-1. 在运行查询之前，选择“新建查询”，然后选择“包括实际执行计划”图标，或者使用 <kbd>CTRL</kbd>+<kbd>M</kbd>。 
+1. 在运行查询之前，选择“新建查询”，然后选择“包括实际执行计划”图标，或者使用 <kbd>CTRL</kbd>+<kbd>M</kbd>。
 
     ![包含实际的执行计划](../images/dp-300-module-10-lab-13.png)
 
@@ -271,7 +271,7 @@ lab:
 
 此查询在其 `WHERE` 子句中使用常数，所以优化器会将每个查询视为唯一，并每次生成不同的执行计划。
 
-## <a name="change-the-query-to-use-a-variable-and-use-a-query-hint"></a>更改查询以使用变量并使用查询提示
+## 更改查询以使用变量并使用查询提示
 
 1. 更改查询以使用 SalesPersonID 的变量值。
 
