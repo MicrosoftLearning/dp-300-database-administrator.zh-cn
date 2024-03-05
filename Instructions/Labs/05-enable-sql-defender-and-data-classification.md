@@ -12,6 +12,8 @@ lab:
 
 你已被聘为高级数据库管理员，帮助确保数据库环境的安全。 这些任务侧重于 Azure SQL 数据库。
 
+**注意：** 这些练习要求你复制粘贴 T-SQL 代码并使用现有的 SQL 资源。 在执行代码之前，请验证代码是否已正确复制。
+
 ## 启用 Microsoft Defender for SQL
 
 1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)。 使用此实验室虚拟机的“资源”选项卡上提供的 Azure 用户名和密码连接到门户。
