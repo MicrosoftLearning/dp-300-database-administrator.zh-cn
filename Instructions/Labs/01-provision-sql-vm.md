@@ -113,11 +113,9 @@ lab:
 
     ![图 26](../images/dp-300-module-01-lab-26.png)
 
-1. 选择 Windows 开始按钮，然后键入 SSMS。 从列表中选择“Microsoft SQL Server Management Studio 18”。  
+1. 选择 Windows 开始按钮，然后键入 SSMS。 从列表中选择“Microsoft SQL Server Management Studio”。****  
 
-    ![图片 34](../images/dp-300-module-01-lab-34.png)
-
-1. 当 SSMS 打开时，请注意，“连接到服务器”对话框将使用默认实例名称预填充。 选择“连接”  。
+1. 当 SSMS 打开时，请注意，**连接到服务器**对话框将使用默认实例名称预填充。 选择“连接”  。
 
     ![图片 35](../images/dp-300-module-01-lab-35.png)
 
