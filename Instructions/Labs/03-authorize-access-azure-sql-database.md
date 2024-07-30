@@ -24,7 +24,7 @@ lab:
 
     ![屏幕截图显示在 Azure 门户主页上选择“所有资源”](../images/dp-300-module-03-lab-01.png)
 
-1. 选择 Azure SQL 数据库服务器 dp300-lab-xxxxxx（其中 xxxxxx 是随机字符串），然后选择“Active Directory 管理员”旁边的“未配置”。
+1. 选择 SQL Server **dp300-lab-xxxxxx**（其中 **xxxxxx** 是随机字符串），然后选择 **Active Directory 管理员**旁边的**未配置**。
 
     ![屏幕截图显示选择“未配置”](../images/dp-300-module-03-lab-02.png)
 
