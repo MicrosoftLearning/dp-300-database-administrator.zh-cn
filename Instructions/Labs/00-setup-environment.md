@@ -12,25 +12,31 @@ lab:
 
 > &#128221; 以下说明适用于 Windows 10 计算机。 也可使用 Linux 或 MacOS。 可能需要根据所选 OS 调整实验室说明。
 
-### Windows 10 (OS)
+### Windows 11 (OS)
 
-1. 安装 Windows 10（版本 2004 或更高版本）。
+1. 安装 Windows 11。
 
 1. 应用所有可用更新。
 
 ### Microsoft Edge
 
-1. 从 [microsoft.com/edge] 安装最新版本的 Microsoft Edge。
+1. 从 [https://microsoft.com/edge] 安装最新版本的 Microsoft Edge。
 
 ### Git
 
-1. 从 [git-scm.com/downloads] 下载并安装。
+1. 从 [https://git-scm.com/downloads ] 下载并安装。
+
+    - 使用安装程序中的默认选项。
+
+### Azure CLI
+
+1. 从 [https://aka.ms/installazurecliwindows ] 下载并安装。
 
     - 使用安装程序中的默认选项。
 
 ### Visual Studio Code
 
-1. 从 [code.visualstudio.com/download] 下载和安装。
+1. 从 [https://code.visualstudio.com/download ] 下载并安装。
 
     - 使用安装程序中的默认选项。
 
@@ -40,8 +46,10 @@ lab:
 
     - 使用安装程序中的默认选项。
 
-### Azure Data Studio
+### SQL Server 2022 Developer 版本
 
-1. 从 [https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio ] 下载并安装。
+1. 从 [https://www.microsoft.com/en-us/sql-server/sql-server-downloads ] 下载并安装。
 
-    - 使用安装程序中的默认选项。
+    - 使用安装程序中的默认选项。 这些实验室只需要 SQL Server 数据库引擎。
+    - 可以使用默认实例。
+    - 你将使用默认身份验证模式。
