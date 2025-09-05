@@ -14,7 +14,7 @@ lab:
 
 ## 在 Azure 虚拟机上部署 SQL Server
 
-1. 在实验室虚拟机中，启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)，然后使用与 Azure 订阅关联的 Microsoft 帐户登录。
+1. 启动浏览器会话并导航到 [https://portal.azure.com](https://portal.azure.com/)，然后使用与 Azure 订阅关联的 Microsoft 帐户登录。
 
 1. 在页面顶部找到搜索栏。 搜索 Azure SQL。 选择“服务”下的结果中显示的 Azure SQL 的搜索结果 。
 
