@@ -1,14 +1,6 @@
-#README
+# DP-300：使用 Azure SQL 实施可缩放的数据库解决方案
 
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
-# DP-300：管理 Microsoft Azure SQL 解决方案
-
-- 你是 MCT 吗？ - 请查看 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide/)
+- **你是 MCT 吗？** - 请查看 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide/)
 
 ## 我们要做什么？
 

@@ -145,7 +145,7 @@ lab:
 
 1. 在 Azure 门户中，转到 **AdventureWorksLT** 数据库。 在左侧窗格的“安全性”下，选择“Microsoft Defender for Cloud”。
 
-1. 在“**安全事件和警报**”下，选择“**在 Defender for Cloud 中检查此资源的警报**”。  
+1. 在“**安全事件和警报**”下，选择“**在 Microsoft Defender for Cloud 中检查此资源的警报**”。  
 
 1. 现在可以看到总体安全警报。  
 
