@@ -1,5 +1,3 @@
-**⚠️ This GitHub repo will retire on 30th December 2025.** 
-
 # DP-300：使用 Azure SQL 实施可缩放的数据库解决方案
 
 - **你是 MCT 吗？** - 请查看 [MCT GitHub 用户指南](https://microsoftlearning.github.io/MCT-User-Guide/)
